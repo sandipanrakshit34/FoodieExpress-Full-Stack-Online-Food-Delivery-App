@@ -1,0 +1,11 @@
+in/bushansirgur/foodiesapi/entity/FoodEntity.class
+in/bushansirgur/foodiesapi/config/AWSConfig.class
+in/bushansirgur/foodiesapi/io/FoodResponse.class
+in/bushansirgur/foodiesapi/io/FoodResponse$FoodResponseBuilder.class
+in/bushansirgur/foodiesapi/repository/FoodRepository.class
+in/bushansirgur/foodiesapi/entity/FoodEntity$FoodEntityBuilder.class
+in/bushansirgur/foodiesapi/service/FoodServiceImpl.class
+in/bushansirgur/foodiesapi/io/FoodRequest.class
+in/bushansirgur/foodiesapi/controller/FoodController.class
+in/bushansirgur/foodiesapi/FoodiesapiApplication.class
+in/bushansirgur/foodiesapi/service/FoodService.class
