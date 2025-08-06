@@ -163,11 +163,16 @@ Food delivery apps often involve complex integrations. This project aims to:
 
 ### 🔹 Frontend:
 - React.js
-- HTML, CSS, JavaScript
+- Bootstrap / Tailwind CSS
+- Axios  
+- React Router
 
 ### 🔹 Backend:
-- Spring Boot (Java)
-- REST APIs
+- Spring Boot  
+- MongoDB  
+- Spring Security  
+- Razorpay Integration  
+- AWS S3 for media hosting  
 
 ### 🔹 Database:
 - MongoDB
@@ -227,10 +232,56 @@ FoodiesapiApplication.java
 
 ### 💻 Frontend Setup (React)
 
+### 👨‍💼 Admin Panel Setup
+
 1. Open terminal, navigate to the admin panel:
+```
+cd adminpanel
+```
+2. Install dependencies and start the server:
+```
+npm install
+npm install --save-dev ajv@^7
+npm run dev
+```
 
-Your app will run on `http://localhost:3000/` by default.
+3. Open your browser at:
+   ```
+   http://localhost:5173/
+   ```
 
+### 👨‍🍳 User Panel Setup
+
+1. Open another terminal, navigate to the user panel:
+```
+cd foodies
+```
+2. Install dependencies and start the server:
+```
+npm install
+npm install --save-dev ajv@^7
+npm run dev
+```
+3. Open your browser at:
+
+```
+http://localhost:5174/
+```
+
+---
+### 🔐 AWS & Razorpay Integration
+- AWS S3 is used for uploading food images from the admin panel and retrieving them in the UI
+- Razorpay is integrated for secure online UPI payment during checkout
+- Payment status is reflected instantly on both admin and user dashboards
+
+### ✨ Unique Points
+- Dual-interface (Admin + User) with role-based routing
+- MongoDB collections and relations built dynamically
+- Spring Security + JWT-based authentication
+- AWS S3 image storage
+- Razorpay online payment support
+- Clean UI with Bootstrap & React
+- Fully mobile responsive frontend
 
 ---
 
@@ -238,7 +289,7 @@ Your app will run on `http://localhost:3000/` by default.
 
 | Home Page | Cart Page | Admin Panel |
 |-----------|-----------|-------------|
-| ![](Assets/home.png) | ![](Assets/cart.png) | ![](Assets/admin.png) |
+| ![](Assets/display3.png) | ![](Assets/display7.png) | ![](Assets/display11.png) |
 
 ---
 
@@ -256,5 +307,6 @@ Your app will run on `http://localhost:3000/` by default.
 
 For queries or support:
 
-📧 Email: yourname@example.com  
-🌐 GitHub: [your-github-profile](https://github.com/your-username)
+📧 Email: sandipanrakshit6@gmail.com
+
+🌐 GitHub: [Sandipan Rakshit](https://github.com/sandipanrakshit34)
