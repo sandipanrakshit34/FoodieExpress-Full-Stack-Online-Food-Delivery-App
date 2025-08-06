@@ -2,7 +2,7 @@
 
 A sleek, responsive **online food ordering system** built with **React.js** and **Spring Boot**. Inspired by top platforms like Zomato and Swiggy, it enables seamless food browsing, cart management, UPI payments, and real-time order tracking.
 
----
+--- 
 
 ## 📌 Table of Contents
 
