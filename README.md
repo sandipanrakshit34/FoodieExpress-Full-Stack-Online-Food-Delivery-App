@@ -18,6 +18,18 @@ A sleek, responsive **online food ordering system** built with **React.js** and 
 ---
 
 ## 🧠 About the Project
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <img src="Assets/display3.png" alt="" width="600" height="400"/>
+      </td>
+      <td>
+        <img src="Assets/display4.png" alt="" width="600" height="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
 
 **FoodieExpress** allows users to:
 - Browse food items by category
@@ -40,28 +52,110 @@ Food delivery apps often involve complex integrations. This project aims to:
 
 ### 🔐 User Authentication
 
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <img src="Assets/display1.png" alt="" width="600" height="400"/>
+      </td>
+      <td>
+        <img src="Assets/display2.png" alt="" width="600" height="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
 - Register/Login using email and password
-- User sessions maintained securely
+- User sessions maintained securely using JWT tokens
+- Role-based access (Admin and Customer)
 
-### 🛒 Customer Side
+## 🛒 Customer Side Features
 
-- Browse food by category and name
-- View food image, description, and price
-- Add items to cart and place order
-- Checkout with billing details
-- Make payments via Razorpay (test mode)
-- Track order status: Preparing → Out for Delivery → Delivered
+### 🍽️ Browse Food by Category and Name
 
-### 🧑‍💼 Admin Panel
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <img src="Assets/display5.png" alt="" width="600" height="400"/>
+      </td>
+      <td>
+        <img src="Assets/display6.png" alt="" width="600" height="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
 
-- Add/Edit/Delete food items with media
-- View all orders placed by customers
-- View and update order statuses
-- Access customer info for deliveries
+- Users can view available food items categorized by cuisine or meal type (e.g., North Indian, South Indian, Beverages)
+- Search functionality lets customers quickly find food items by typing the name
+- Real-time filtered display based on selected categories
 
-### ✉️ Email Notification
+### 🛍️ Add to Cart and Place Order
 
-- Order confirmation email via Gmail API
+<div align="center">
+  <table>
+    <tr>
+      <td>
+        <img src="Assets/display7.png" alt="" width="600" height="400"/>
+      </td>
+      <td>
+        <img src="Assets/display8.png" alt="" width="600" height="400"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
+- Customers can add multiple food items to the cart with quantity selection
+- Live cart summary updates pricing dynamically
+- Users can update/remove items before placing the order
+
+### 💳 Razorpay Payment Integration
+
+<div align="center"> <img src="Assets/display9.png" alt="Login Page" width="600" height="600"/> </div>
+
+- Secure payment handling via Razorpay
+- Live transaction status update after redirection from payment gateway
+- Orders only processed after successful payment
+
+### 📦 Track Order History
+
+<div align="center"> <img src="Assets/display10.png" alt="Login Page" width="600" height="600"/> </div>
+
+- Customers can view all their past orders with time, date, and item details
+- Order status tracking for each placed order
+
+---
+
+## 🧑‍💼 Admin Side Features
+
+### 🧾 Manage Food Items
+
+<div align="center"> <img src="Assets/display11.png" alt="Login Page" width="600" height="600"/> </div>
+
+- Admins can add, update, or delete food items from the menu
+- Food details include name, category, image, price, and availability
+- Admin panel provides instant feedback on actions (e.g., "Food item added successfully")
+
+### 🗃️ Manage Categories
+
+<div align="center"> <img src="Assets/display12.png" alt="Login Page" width="600" height="600"/> </div>
+
+- Create and remove food categories dynamically
+- Categories help structure the menu for easy browsing by users
+- Ensures only active categories are visible to customers
+
+### 📄 Customer Order Management
+
+<div align="center"> <img src="Assets/display13.png" alt="Login Page" width="600" height="600"/> </div>
+
+- View all customer orders placed through the application
+- Filter orders by date, user, or food item
+- Orders include payment status, transaction ID, and delivery info
+
+### 📊 Dashboard Overview
+
+- Visual summary of total orders, users, and food items
+- Quick snapshot of platform performance and customer activity
 
 ---
 
@@ -91,25 +185,52 @@ Food delivery apps often involve complex integrations. This project aims to:
 
 ## 🚀 Setup Instructions
 
-### 🔧 Backend Setup (Spring Boot)
+### 🔃 Clone the Repository
 
-1. Clone the repository and import backend into your IDE (IntelliJ or Eclipse)
-2. Configure `application.properties` with your MongoDB, AWS, and Gmail API credentials
-3. Run the application using:
-   ```bash
-   ./mvnw spring-boot:run
+```bash
+git clone https://github.com/sandipanrakshit34/FoodieExpress-Full-Stack-Online-Food-Delivery-App
+```
+
+### 🧩 Backend Setup (Spring Boot)
+
+1. Open the `foodiesapi` folder in IntelliJ IDEA or your preferred IDE.
+2. Open `src/main/resources/application.properties` and add your AWS & Razorpay keys:
+
+```properties
+spring.data.mongodb.uri=YOUR_DEVICE_MONGODB_URL
+
+# AWS S3 Configuration
+aws.access.key=YOUR_AWS_ACCESS_KEY
+aws.secret.key=YOUR_AWS_SECRET_KEY
+aws.region=YOUR_AWS_REGION
+aws.s3.bucketname=foodies-foods
+
+# JWT Configuration
+jwt.secret.key=YOUR_JWT_SECRET_KEY
+
+# Razorpay Configuration
+razorpay_key=YOUR_RAZORPAY_KEY
+razorpay_secret=YOUR_RAZORPAY_SECRET
+```
+
+3. Create a database in MongoDB Compass:
    ```
+   CREATE DATABASE foodies;
+   ```
+4. Run the main class:
+```
+FoodiesapiApplication.java
+```
+✅ Spring Boot will start on `http://localhost:8080` and connect to your `MongoDB`. Collections will be auto-generated.
+
+--
 
 ### 💻 Frontend Setup (React)
 
-```bash
-git clone https://github.com/your-username/foodie-express.git
-cd foodie-express/frontend
-npm install
-npm start
-```
+1. Open terminal, navigate to the admin panel:
 
 Your app will run on `http://localhost:3000/` by default.
+
 
 ---
 
